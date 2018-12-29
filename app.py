@@ -18,7 +18,7 @@ def home():
 
 @app.route("/music/<path:filename>")
 def music(filename):
-    return send_from_directory('../templates', filename)
+    return send_from_directory('/templates', filename)
 
 @app.route("/scrape")
 def scrape():
