@@ -19,7 +19,7 @@ def home():
 @app.route("/music/<path:filename>")
 def music(filename):
     #Path may need to be adjusted depending on where the file is located
-    return send_from_directory('../templates', filename)
+    return send_from_directory('../Mission_to_Mars/templates', filename)
 
 @app.route("/scrape")
 def scrape():
