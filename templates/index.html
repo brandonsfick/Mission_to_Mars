@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars News and Weather</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+  crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  
+  <div class="container-fluid">
+    <div class="jumbotron text-center" background>
+      <h1>Mission to Mars Project</h1>
+      <p >What you need to know.</p>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Up-To-Date Data!</a></p>
+    </div>
+    </op>
+      <h2>{{ Mars.Mars_News.title }}</h2>
+      <p>{{ Mars.Mars_News.Teaser }}</p>
+      <div class="row">
+        <div class ="col-sm-7"><img src="{{ Mars.featured_image_url}}" alt ="Featured_Image" style="width:100%; height: 100%"></div>
+        <div class ="col-sm-5"><h3>Mars Weather</h3><p> {{ Mars.mars_weather }}</p> <h3>Fun Mars Facts</h3><p> {{ Mars.fun_facts|safe }}</p></div>    
+      </div>
+      <p>&nbsp</p>
+      <hr>
+      <h2>Mars' Four Hemispheres</h2>
+      <div class="row">
+        <div class ="col-sm-6"><h3> {{ Mars.hemisphere_image_urls.0.title }} Image</h2><img src="{{ Mars.hemisphere_image_urls.0.img_url}}" alt ="{{ Mars.hemisphere_image_urls.0.title}}" style="width:100%; height: 100%"></div>
+        <div class ="col-sm-6"><h3> {{ Mars.hemisphere_image_urls.1.title }} Image</h2><img src="{{ Mars.hemisphere_image_urls.1.img_url}}" alt ="{{ Mars.hemisphere_image_urls.1.title }}" style="width:100%; height: 100%"></div>
+      </div>
+      <div class="row">
+        <div class ="col-sm-6"><h3> {{ Mars.hemisphere_image_urls.2.title }} Image</h2><img src="{{ Mars.hemisphere_image_urls.2.img_url}}" alt ="{{ Mars.hemisphere_image_urls.2.title}}" style="width:100%; height: 100%"></div>
+        <div class ="col-sm-6"><h3> {{ Mars.hemisphere_image_urls.3.title }} Image</h2><img src="{{ Mars.hemisphere_image_urls.3.img_url}}" alt ="{{ Mars.hemisphere_image_urls.3.title}}" style="width:100%; height: 100%"></div>
+      </div>
+  </div>
+  </div>
+  <!-- <audio loop="loop" autoplay="autoplay">
+    <source src="Challenger_Mission_Control.mp3" type="audio/mpeg">
+  </audio>  -->
+
+  <audio controls autoplay loop>
+      <source src="/music/Sounds_of_Mars.ogg" >
+        Error: your web browser does not support this audio player.
+  </audio>
+</body>
+
+</html>
