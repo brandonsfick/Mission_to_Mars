@@ -1,4 +1,3 @@
 # Mission_to_Mars
-Dashboard of NASA's Mars news, from web scraping NASA's website.
 
-Scraping data to develop a personalized dashboard to track NASA's initiatives on Mars.
+A program designed to scrape web data, store it in a database and create a dashboard to track NASA's initiatives on Mars.
